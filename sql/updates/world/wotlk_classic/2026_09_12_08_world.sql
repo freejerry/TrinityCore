@@ -1,0 +1,30 @@
+-- spell_enchant_proc_data: Restore 26 WotLK weapon proc-enchant rows dropped by TDB343.
+-- Verified: applied to raw TDB343 this reproduces the 3.3.5a (world_335) set exactly.
+-- Re-add the 26 WotLK proc-enchant rows dropped by TDB343. The 16 existing world_d rows are byte-identical to 335, so no UPDATE/DELETE is needed.
+INSERT INTO `spell_enchant_proc_data` (`EnchantID`,`Chance`,`ProcsPerMinute`,`HitMask`,`AttributesMask`) VALUES
+(2,0,8.8,0,0),
+(12,0,8.8,0,0),
+(323,0,8.53,0,0),
+(324,0,8.53,0,0),
+(325,0,8.53,0,0),
+(524,0,8.8,0,0),
+(623,0,8.53,0,0),
+(624,0,8.53,0,0),
+(625,0,8.53,0,0),
+(703,0,21.43,0,0),
+(704,0,21.43,0,0),
+(705,0,21.43,0,0),
+(706,0,21.43,0,0),
+(1667,0,8.8,0,0),
+(1668,0,8.8,0,0),
+(2635,0,8.8,0,0),
+(2641,0,8.53,0,0),
+(2644,0,21.43,0,0),
+(3369,0,1,0,0),
+(3768,0,8.53,0,0),
+(3769,0,8.53,0,0),
+(3772,0,21.43,0,0),
+(3773,0,21.43,0,0),
+(3782,0,8.8,0,0),
+(3783,0,8.8,0,0),
+(3784,0,8.8,0,0);
