@@ -964,3 +964,14 @@ TDB343 creature_loot_template 移除的掉落列所引用的 **949 個 item**(up
 | 521550 | 1 | 1 | custom(>100000) |
 
 共 949 個 item(皆不存在於 client 與 335)。
+
+## wowhead 抽驗(第 3 個獨立來源,確認 trim 無誤刪)
+
+| item | wowhead WotLK Classic | 判定 |
+|---|---|---|
+| 16507（對照，client-valid，未 trim） | ✅ 存在 (Champion's Leather Mantle) | 保留 |
+| 1055（trimmed） | ❌ 404 | 移除 |
+| 49765（trimmed，WotLK id 範圍） | ❌ 404 | 移除 |
+| 55511（trimmed，高 id） | ❌ 404 | 移除 |
+
+三方(3.4.3 客戶端 Item.db2、TDB335.26091、wowhead WotLK Classic)一致：被 trim 的 item 皆不存在。（WebFetch 可查 wowhead;curl 被 Cloudflare 擋。可對清單任一 id 以 https://www.wowhead.com/wotlk/item=<id> 手驗。）
