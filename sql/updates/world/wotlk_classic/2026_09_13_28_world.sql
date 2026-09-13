@@ -1,3 +1,3 @@
--- gossip_menu: adopt TDB343 (sniff, covers our creature_template_gossip MenuIDs best); backfill from
--- TDB335.26091 the menu(s) our gossip refs need that 343 lacks. Clears most 'menu doesn't exist' warnings.
-INSERT INTO `gossip_menu` (`MenuID`,`TextID`,`VerifiedBuild`) VALUES (7999,9853,0),(9856,10887,0);
+-- gossip_menu: adopt TDB343; drop rows whose TextID references an npc_text absent from TDB343
+-- (npc_text is TDB343 verbatim; 3.3.5 npc_text schema differs so no backfill). Same-DB subquery.
+DELETE FROM `gossip_menu` WHERE `TextID`<>0 AND `TextID` NOT IN (SELECT `ID` FROM `npc_text`);
