@@ -42,3 +42,8 @@ _C-layer research workflow (deferred batch), run wf_e38612bd-12c._
 ## Update — 3.4.3 DBErrors.log validation
 
 Reloaded world_c: 37 spell IDs absent from the 3.4.3 client (ICC/ToC/Gunship encounter + talent-trigger links) dropped. Final **381 rows**, loads with 0 DBErrors.
+
+
+## Update -- re-verified against TDB335.26091 (2026-09-14)
+
+Re-based on TDB335.26091 as sole WotLK authority (26091 removed 83 rows vs 25101; the earlier 343-derived 'Constructed' set is dropped in favour of the 26091 authoritative set). After client-trim: 245 rows. Update 2026_09_13_02 regenerated.

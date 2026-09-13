@@ -50,3 +50,8 @@ _C-layer research workflow (deferred batch), run wf_e38612bd-12c._
 ## Update — 3.4.3 DBErrors.log validation
 
 Reloaded world_c: 28 rows referenced spells absent from the 3.4.3 client ("has wrong spell"), plus 2 SHARE_DAMAGE rows (66765/66809) whose attribute the core ignores (no SCHOOL_DAMAGE effect); all dropped. Final **246 rows**, loads with 0 DBErrors.
+
+
+## Update -- re-verified against TDB335.26091 (2026-09-14)
+
+Re-based on TDB335.26091 (+1 row, entry 41910). After client-trim: 248 rows. Update 2026_09_13_01 regenerated.

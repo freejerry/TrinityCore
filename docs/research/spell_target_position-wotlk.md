@@ -42,3 +42,8 @@ _C-layer research workflow (deferred batch), run wf_e38612bd-12c._
 ## Update — 3.4.3 DBErrors.log validation
 
 Reloaded world_c on the 3.4.3 core: 14 spell IDs (25708,26538-26539,26630-26632,31528-31530,33558,33567,33614-33616) reference spells absent from the 3.4.3 client and were dropped (15 rows). Final **604 rows**, loads with 0 DBErrors. NOTE: the current wotlk_classic core (SpellMgr.cpp:1290) SELECTs an `OrderIndex` column absent from the TDB343 base schema — a separate schema migration is required before running a freshly-built core; see memory core-todo-spell_target_position-orderindex.
+
+
+## Update -- re-verified against TDB335.26091 (2026-09-14)
+
+Re-based on TDB335.26091 (authority refreshed from 25101; +84/-58 row drift). After client-trim (wago SpellName): 604 rows. Update 2026_09_13_00 regenerated.
