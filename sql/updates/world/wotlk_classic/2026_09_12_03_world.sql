@@ -1,14 +1,11 @@
--- spell_learn_spell: Drop MoP Battle Pet Training rows and restore 6 WotLK learn-spell links.
--- Verified: applied to raw TDB343 this reproduces the 3.3.5a (world_335) set exactly.
+-- spell_learn_spell: drop MoP Battle Pet Training rows and restore WotLK learn-spell links.
+-- The 4 Feral Swiftness / Nurturing Instinct links (17002/24866/33872/33873) are talent
+-- spells the 3.4.3 core refuses to teach via this table ("attempts learning talent spell,
+-- skipped" in DBErrors.log), so they are omitted; only the 2 Death Knight Runeforging links
+-- are added. Applied to raw TDB343 this yields the 4 rows that actually load on the 3.4.3 client.
 -- Drop MoP "Battle Pet Training" contamination
 DELETE FROM `spell_learn_spell` WHERE `entry`=125610 AND `SpellID` IN (119467,122026,125439);
--- Re-add WotLK learn-relationships TDB343 dropped (present in world_335)
+-- Re-add the WotLK Runeforging learn links TDB343 dropped
 INSERT INTO `spell_learn_spell` (`entry`,`SpellID`,`Active`) VALUES
- (17002,24867,0),  -- Feral Swiftness -> Feral Swiftness Passive 1a
- (24866,24864,0),  -- Feral Swiftness (rank) -> Feral Swiftness Passive 2a
- (33872,47179,0),  -- Nurturing Instinct -> passive
- (33873,47180,0),  -- Nurturing Instinct (rank) -> passive
  (53428,53341,1),  -- Runeforging -> Rune of Cinderglacier
  (53428,53343,1);  -- Runeforging -> Rune of Razorice
--- The 2 shared rows (33943->34090, 58984->21009) already exist in RAW 343; leave as-is.
--- Applied to world_d this yields exactly world_335's 8 rows.

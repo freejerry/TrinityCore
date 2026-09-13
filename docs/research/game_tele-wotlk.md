@@ -45,3 +45,8 @@ FROM `world_335`.`game_tele`;
 
 ---
 _Generated from C-layer research workflow (batch 2), run wf_f9c949d0-e24._
+
+
+## Update — 3.4.3 client validation (DBErrors.log oracle)
+
+Server-log validation dropped 5 entries the 3.4.3 client rejects ("Wrong position, ignoring"): id 67 AzsharaCrater (map 37, absent in 3.4.3) and test points 1512-1515 (ExteriorTest/ScottTest/Testing/QA_DVD). Final set **1488 rows**, not 1493. Update rewritten as self-contained literal INSERTs (no world_335 reference). Source reclassified Mixed.

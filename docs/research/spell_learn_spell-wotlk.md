@@ -60,3 +60,8 @@ Could not directly read the 3.4.3 client SpellName/SpellEffect/SpellMisc DB2s to
 
 ---
 _Generated from C-layer research workflow (batch 1), run wf_36e31f1e-3e1._
+
+
+## Update — 3.4.3 client validation (DBErrors.log oracle)
+
+Server-log validation: the 4 Feral Swiftness / Nurturing Instinct links (17002/24866/33872/33873) are talent spells the 3.4.3 core refuses to teach via this table ("attempts learning talent spell, skipped"). They are omitted; only the 2 Runeforging links are added. Final set **4 rows** that actually load. The spells DO exist (the earlier SpellName.db2 audit claiming otherwise was invalid).

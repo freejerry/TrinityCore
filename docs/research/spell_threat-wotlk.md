@@ -48,3 +48,8 @@ INSERT INTO `spell_threat` (`entry`,`flatMod`,`pctMod`,`apPctMod`) VALUES
 
 ---
 _Generated from C-layer research workflow (batch 1), run wf_36e31f1e-3e1._
+
+
+## Update — 3.4.3 client validation (DBErrors.log oracle)
+
+Server-log validation (reload world_c → DBErrors.log) found spell **65142** does not exist in the 3.4.3 client. Final set drops it: **105 rows**, not the full 3.3.5a 106. Source reclassified Mixed. The earlier SpellName.db2-based audit was invalid (broken extraction).
